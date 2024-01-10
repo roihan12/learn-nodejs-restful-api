@@ -125,8 +125,8 @@ Query Params :
 - name: Search by first name or last name, using like, optional
 - email: Search by email , using like, optional
 - phone: Search by phone, using like, optional
--page: number of page defaults 1
--size: size per page, default 10
+- page: number of page defaults 1
+- size: size per page, default 10
 
 Response Body Success :
 
