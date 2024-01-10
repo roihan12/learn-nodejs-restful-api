@@ -1,8 +1,149 @@
+### Register Users
 POST http://localhost:5000/api/users
 Content-Type: application/json
+Accept: application/json
 
 {
-  "username": "roihan12",
+  "username": "roihan34",
   "password": "test123",
   "name": "Roihan Sori"
 }
+
+### Login Users 
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "username": "roihan34",
+  "password": "test123"
+}
+
+### Get Current Users 
+GET  http://localhost:5000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+
+
+### Update Users 
+PATCH  http://localhost:5000/api/users/current
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+{
+ "name": "Roihan Sori Nasution"
+}
+
+### Logout Users 
+DELETE   http://localhost:5000/api/users/logout
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+
+### Create Contact 
+POST http://localhost:5000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+{
+  "first_name": "Jonathan",
+  "last_name": "Christine",
+  "email": "jonathan@gmail.com",
+  "phone": "0857733673993"
+}
+
+### Get All Contact 
+GET  http://localhost:5000/api/contacts
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+### Search Contact 
+#can by name
+#can by email
+#can by phone
+
+#size
+#page
+
+GET  http://localhost:5000/api/contacts?email=gmail.com&size=10&page=1
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+### Get By Id Contact 
+GET  http://localhost:5000/api/contacts/3710
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+
+### Update Contact 
+PUT   http://localhost:5000/api/contacts/3710
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+{
+  "first_name": "Atlete Jonathan",
+  "last_name": "Christi",
+  "email": "jonathanchris@gmail.com",
+  "phone": "0857733673993"
+}
+
+### Delete Contact 
+DELETE   http://localhost:5000/api/contacts/3710
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+### Create Address
+POST http://localhost:5000/api/contacts/3711/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+{
+  "street": "Jl. Wisma Atlet",
+  "city": "Jakarata Selatan",
+  "province": "DKI Jakarta",
+  "country": "Indonesia",
+  "postal_code": "234456"
+}
+
+### Get List Address
+GET  http://localhost:5000/api/contacts/3711/addresses
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+### Get Address by Id
+GET  http://localhost:5000/api/contacts/3711/addresses/72
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+### Update Address
+PUT http://localhost:5000/api/contacts/3711/addresses/72
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f
+
+{
+  "street": "Jl. Wisma Atlet Tower 2",
+  "city": "Jakarata Pusat",
+  "province": "DKI Jakarta",
+  "country": "Indonesia",
+  "postal_code": "234456"
+}
+
+### Delete Address 
+DELETE  http://localhost:5000/api/contacts/3711/addresses/72
+Content-Type: application/json
+Accept: application/json
+Authorization: 1387b626-259b-49ee-910b-5195daa4346f

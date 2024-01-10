@@ -19,9 +19,29 @@ userRouter.put("/api/contacts/:contactId", contactController.updateContact);
 userRouter.delete("/api/contacts/:contactId", contactController.removeContact);
 userRouter.get("/api/contacts", contactController.searchContact);
 
-
 // Address API
-userRouter.post("/api/contacts/:contactId/addresses", addressController.createAddress)
+userRouter.post(
+  "/api/contacts/:contactId/addresses",
+  addressController.createAddress
+);
+userRouter.get(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.getAddress
+);
 
+userRouter.put(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.updateAddress
+);
+
+userRouter.delete(
+  "/api/contacts/:contactId/addresses/:addressId",
+  addressController.removeAddress
+);
+
+userRouter.get(
+  "/api/contacts/:contactId/addresses",
+  addressController.listAddress
+);
 
 export { userRouter };

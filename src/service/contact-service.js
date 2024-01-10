@@ -125,11 +125,13 @@ const search = async (user, request) => {
         {
           first_name: {
             contains: request.name,
+            mode: 'insensitive'
           },
         },
         {
           last_name: {
             contains: request.name,
+            mode: 'insensitive'
           },
         },
       ],
@@ -140,6 +142,7 @@ const search = async (user, request) => {
     filters.push({
       email: {
         contains: request.email,
+        mode: 'insensitive'
       },
     });
   }
